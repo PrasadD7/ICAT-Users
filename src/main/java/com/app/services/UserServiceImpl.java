@@ -18,13 +18,17 @@ public class UserServiceImpl implements IUserService {
 	private IUserDao dao;
 	
 	public List<User> getAll(){
+		System.out.println(dao.findAll());
 		return dao.findAll();		
 	}
 	
 	public User addOne(User u) {
 		return dao.save(u);
 	}
-
 	
+	public User getUserById(int id) {
+		return dao.getOne(id);
+	}
+
 
 }

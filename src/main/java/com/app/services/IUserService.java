@@ -10,4 +10,6 @@ public interface IUserService {
 	
 	public User addOne(User u);
 	
+	public User getUserById(int id);
+	
 }
